@@ -10,7 +10,7 @@ const Header = () => {
           fill
           className="w-full h-full object-cover"
         />
-        <div className="absolute top-1/2 left-8 max-w-sm md:max-w-lg p-4 -translate-y-16 border-2 md:p-10 border-yellow-200">
+        <div className="absolute top-1/2 left-8 max-w-60 sm:max-w-sm lg:max-w-lg p-4 -translate-y-16 border-2 md:p-10 border-yellow-200">
           <h1 className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-white mb-4 text-2xl md:text-5xl uppercase">
             Servicios eléctricos
           </h1>

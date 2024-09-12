@@ -4,6 +4,7 @@ import { Oswald } from "next/font/google";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { MoonIcon, SunIcon } from "lucide-react";
+import { MenuIcon, XIcon } from "lucide-react";
 
 const oswald = Oswald({
   weight: ["600"],
@@ -81,13 +82,19 @@ const Navbar = () => {
         <Link
           href={"/"}
           className={cn(
-            "text-2xl lg:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-black dark:to-yellow-200",
+            "text-2xl lg:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-black dark:to-yellow-200 flex",
             oswald.className
           )}
         >
           HenryElectricidad
         </Link>
         <div className="hidden lg:flex gap-8">
+          <div
+            className="cursor-pointer dark:text-yellow-500"
+            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+          >
+            {theme === "light" ? <MoonIcon size={24} /> : <SunIcon size={24} />}
+          </div>
           <div>
             <Link href={"/"}>Inicio</Link>
           </div>
@@ -138,23 +145,9 @@ const Navbar = () => {
           <div>
             <button
               onClick={() => setIsOpen((prev) => !prev)}
-              className="hamburguer outline-none "
+              className="hamburguer outline-none grid"
             >
-              <span
-                className={`${
-                  isOpen && "open"
-                } hamburguer-top bg-black dark:bg-white`}
-              ></span>
-              <span
-                className={`${
-                  isOpen && "open"
-                } hamburguer-middle bg-black dark:bg-white`}
-              ></span>
-              <span
-                className={`${
-                  isOpen && "open"
-                } hamburguer-bottom bg-black dark:bg-white`}
-              ></span>
+              {isOpen ? <XIcon size={32} /> : <MenuIcon size={32} />}
             </button>
           </div>
         </div>
