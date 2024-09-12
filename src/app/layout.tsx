@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Roboto } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const roboto = Roboto({
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Servicos Eléctricos",
@@ -17,8 +24,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
-      <body className="bg-gray-600 dark:bg-gray-800">
+    <html lang="es" className="dark">
+      <body className={cn("bg-slate-600 dark:bg-gray-800", roboto.className)}>
         <main className="container max-w-[1280px] mx-auto">{children}</main>
       </body>
     </html>
