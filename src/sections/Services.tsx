@@ -1,15 +1,12 @@
 import Section from "@/components/Section";
-import SectionHeading from "@/components/SectionHeading";
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { services } from "@/data/services";
-import { Plug } from "lucide-react";
 
 const Services = () => {
   return (

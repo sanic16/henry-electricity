@@ -73,7 +73,7 @@ const Navbar = () => {
     <div
       className={`fixed container max-w-[1280px] mx-auto  h-20 top-0 left-0 right-0 grid items-center px-4 text-black dark:text-white z-[1] ${
         bgOnScroll
-          ? "bg-white/50 dark:bg-black/55 backdrop-blur-sm"
+          ? "bg-white/50 dark:bg-black/55 backdrop-blur-sm shadow-sm shadow-black dark:shadow-yellow-500/50"
           : "bg-[whitesmoke] dark:bg-black"
       }`}
     >
@@ -109,7 +109,7 @@ const Navbar = () => {
         <div
           className={`lg:hidden transition-all duration-500 fixed ${
             isOpen ? "left-0 backdrop-blur-md" : "-left-full"
-          } top-20 right-0 bottom-0 flex flex-col w-full h-[calc(100vh-5rem)] pt-40 landscape:pt-4 landscape:space-y-1 pl-12 space-y-3 text-lg text-black bg-yellow-500/80`}
+          } top-20 right-0 bottom-0 flex flex-col w-full h-[calc(100vh-5rem)] pt-40 landscape:pt-4 landscape:space-y-1 pl-12 space-y-3 text-lg text-white bg-black/95`}
         >
           <div>
             <Link href={"/"}>Inicio</Link>
@@ -140,9 +140,21 @@ const Navbar = () => {
               onClick={() => setIsOpen((prev) => !prev)}
               className="hamburguer outline-none "
             >
-              <span className={`${isOpen && "open"} hamburguer-top`}></span>
-              <span className={`${isOpen && "open"} hamburguer-middle`}></span>
-              <span className={`${isOpen && "open"} hamburguer-bottom`}></span>
+              <span
+                className={`${
+                  isOpen && "open"
+                } hamburguer-top bg-black dark:bg-white`}
+              ></span>
+              <span
+                className={`${
+                  isOpen && "open"
+                } hamburguer-middle bg-black dark:bg-white`}
+              ></span>
+              <span
+                className={`${
+                  isOpen && "open"
+                } hamburguer-bottom bg-black dark:bg-white`}
+              ></span>
             </button>
           </div>
         </div>
