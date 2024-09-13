@@ -67,7 +67,7 @@ const Navbar = () => {
         <Link
           href={"/"}
           className={cn(
-            "text-2xl lg:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-800 dark:from-yellow-500 to-black dark:to-yellow-200 flex",
+            "text-2xl lg:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-950 dark:from-yellow-500 to-black dark:to-yellow-200 flex",
             oswald.className
           )}
         >

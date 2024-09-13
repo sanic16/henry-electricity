@@ -22,7 +22,7 @@ const Standards = () => {
             className="min-w-[250px] max-w-[300px] w-full sm:max-w-full"
           >
             <CardHeader className="text-center">
-              <CardTitle className="bg-clip-text text-xl text-transparent bg-gradient-to-r dark:from-yellow-500 from-blue-800 to-black max-w-full  dark:to-yellow-200">
+              <CardTitle className="bg-clip-text text-xl text-transparent bg-gradient-to-r dark:from-yellow-500 from-blue-950 to-black max-w-full  dark:to-yellow-200">
                 {standard.title} - {standard.id === 2 && <br />} (
                 {standard.titleAbbreviation})
               </CardTitle>

@@ -4,7 +4,6 @@ import Header from "@/sections/Header";
 import Navbar from "@/sections/Navbar";
 import Services from "@/sections/Services";
 import Standards from "@/sections/Standards";
-import WorkFlow from "@/sections/WorkFlow";
 
 export default function Home() {
   return (
@@ -14,7 +13,6 @@ export default function Home() {
       <Feature />
       <Services />
       <Standards />
-      <WorkFlow />
       <Footer />
     </div>
   );
