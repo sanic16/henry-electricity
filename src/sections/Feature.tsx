@@ -13,7 +13,7 @@ const Feature = () => {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="min-w-[275px] w-1/2 sm:w-[450px] md:w-[450px] lg:w-[600px] absolute top-60 sm:top-20 md:top-24 lg:top-32   right-0 sm:-right-32 md:-right-56 lg:-right-72 bg-card shadow-sm py-4 sm:py-8 lg:py-16 px-4 sm:px-8 lg:px-10 border-b-2 lg:border-b-[4px] border-b-yellow-500 border-r-2 lg:border-r-[4px] border-r-yellow-500">
+        <div className="min-w-[275px] w-1/2 sm:w-[450px] md:w-[450px] lg:w-[600px] absolute top-60 sm:top-20 md:top-24 lg:top-32   right-0 sm:-right-32 md:-right-56 lg:-right-72 bg-card shadow-sm py-4 sm:py-8 lg:py-16 px-4 sm:px-8 lg:px-10 border-b-2 lg:border-b-[4px] border-b-blue-800 dark:border-b-yellow-500 border-r-2 lg:border-r-[4px] border-r-blue-800 dark:border-r-yellow-500">
           <h1 className="text-3xl md:text-4xl lg:text-5xl uppercase mb-2 sm:mb-4 lg:mb-6 leading-[1.18]">
             Servicios de calidad en ingeniería eléctrica
           </h1>

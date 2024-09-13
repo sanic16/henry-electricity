@@ -14,7 +14,7 @@ const Services = () => {
             <CardHeader>
               <div className="flex justify-center mb-2">
                 {
-                  <service.icon className="h-10 w-10 text-yellow-600 dark:text-yellow-200" />
+                  <service.icon className="h-10 w-10  text-blue-800 dark:text-yellow-200" />
                 }
               </div>
               <CardTitle className="text-center font-semibold text-xl">

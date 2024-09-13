@@ -64,3 +64,11 @@
     @apply text-foreground min-h-[200vh];
   }
 }
+
+.connector {
+  position: absolute;
+  width: 2px;
+  background-color: #000;
+  top: 50%;
+  transform: translateY(-50%);
+}
