@@ -74,7 +74,7 @@ const Navbar = () => {
     <div
       className={`fixed container max-w-[1280px] mx-auto  h-20 top-0 left-0 right-0 grid items-center px-4 text-black dark:text-white z-[1] ${
         bgOnScroll
-          ? "bg-white/50 dark:bg-black/55 backdrop-blur-sm shadow-sm shadow-black dark:shadow-yellow-500/50"
+          ? "bg-white/50 dark:bg-black/55 backdrop-blur-sm shadow-sm border-1 border-b border-black/50 dark:border-yellow-200/50"
           : "bg-[whitesmoke] dark:bg-black"
       }`}
     >

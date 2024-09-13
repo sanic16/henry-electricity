@@ -5,7 +5,7 @@ const Header = () => {
     <div className="px-4 pb-4 h-[calc(100vh-5rem)] bg-white dark:bg-black">
       <div className="w-full h-full relative mt-20">
         <Image
-          src={`${process.env.BASE_IMAGE_URL}servicios-electricos-ajquejay/vbqn6wa9oou3d9ohml63`}
+          src={`${process.env.BASE_IMAGE_URL}servicios-electricos-ajquejay/m0d4w79sf96jw35q2gl4`}
           alt="Servicios eléctricos"
           fill
           className="w-full h-full object-cover"

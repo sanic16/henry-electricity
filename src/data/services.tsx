@@ -66,3 +66,36 @@ export const services = [
     icon: Sun, // Solar panels installation
   },
 ];
+
+export const standards = [
+  {
+    id: 1,
+    title: "IEC",
+    titleAbbreviation: "International Electrotechnical Commission",
+    description: "Normas de instalaciones eléctricas en Europa.",
+    content:
+      "Aplicamos normas IEC para asegurar la calidad y la seguridad en instalaciones eléctricas de baja tensión, abarcando desde el diseño y la automatización hasta el mantenimiento y la instalación de sistemas eléctricos.",
+    standards: [
+      "IEC 60364 - Instalaciones eléctricas en baja tensión",
+      "IEC 60439 - Tableros de distribución de energía eléctrica",
+      "IEC 61439 - Tableros de baja tensión",
+      "IEC 61557 - Medición de aislamiento",
+      "IEC 61643 - Protección contra sobretensiones",
+    ],
+  },
+  {
+    id: 2,
+    title: "NEC",
+    titleAbbreviation: "National Electrical Code",
+    description: "Normas de instalaciones eléctricas en Estados Unidos.",
+    content:
+      "Adherimos a las normas NEC para garantizar la seguridad y el rendimiento óptimo en instalaciones eléctricas de baja tensión, incluyendo el diseño, la automatización, el mantenimiento y la instalación de sistemas eléctricos.",
+    standards: [
+      "NEC 210 - Instalaciones eléctricas en viviendas",
+      "NEC 215 - Instalaciones eléctricas en comercios",
+      "NEC 220 - Cálculo de cargas eléctricas",
+      "NEC 240 - Protección contra sobrecargas",
+      "NEC 250 - Conexión a tierra",
+    ],
+  },
+];
