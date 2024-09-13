@@ -87,7 +87,7 @@ export const standards = [
     id: 2,
     title: "NEC",
     titleAbbreviation: "National Electrical Code",
-    description: "Normas de instalaciones eléctricas en Estados Unidos.",
+    description: "Normas de instalaciones eléctricas en EE.UU.",
     content:
       "Adherimos a las normas NEC para garantizar la seguridad y el rendimiento óptimo en instalaciones eléctricas de baja tensión, incluyendo el diseño, la automatización, el mantenimiento y la instalación de sistemas eléctricos.",
     standards: [

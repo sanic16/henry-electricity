@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Roboto } from "next/font/google";
 import { cn } from "@/lib/utils";
+import { ThemeContextProvider } from "@/context/ThemeContext";
 
 const roboto = Roboto({
   weight: ["400", "500", "700"],
@@ -26,7 +27,9 @@ export default function RootLayout({
   return (
     <html lang="es" className="dark">
       <body className={cn("bg-slate-600 dark:bg-gray-800", roboto.className)}>
-        <main className="container max-w-[1280px] mx-auto">{children}</main>
+        <ThemeContextProvider>
+          <main className="container max-w-[1280px] mx-auto">{children}</main>
+        </ThemeContextProvider>
       </body>
     </html>
   );

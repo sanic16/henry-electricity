@@ -1,11 +1,5 @@
 import Section from "@/components/Section";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { services } from "@/data/services";
 
 const Services = () => {
@@ -23,13 +17,11 @@ const Services = () => {
                   <service.icon className="h-10 w-10 text-yellow-600 dark:text-yellow-200" />
                 }
               </div>
-              <CardTitle className="text-center text-2xl">
+              <CardTitle className="text-center font-semibold text-xl">
                 {service.title}
               </CardTitle>
               <CardContent>
-                <CardDescription className="text-center text-base">
-                  {service.description}
-                </CardDescription>
+                <p className="text-center text-base">{service.description}</p>
               </CardContent>
             </CardHeader>
           </Card>

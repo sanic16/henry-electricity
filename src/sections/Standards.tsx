@@ -15,19 +15,23 @@ const Standards = () => {
       title="Normas"
       description="Cumplimos con las normas IEC o NEC dependiendo del proyecto y del equipo de trabajo."
     >
-      <div className="grid grid-cols-[315px] md:grid-cols-[315px,315px] justify-center gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-[325px] md:grid-cols-[350px,350px] justify-items-center justify-center gap-8">
         {standards.map((standard) => (
-          <Card key={standard.id}>
+          <Card
+            key={standard.id}
+            className="min-w-[250px] max-w-[300px] w-full sm:max-w-full"
+          >
             <CardHeader className="text-center">
               <CardTitle className="bg-clip-text text-xl text-transparent bg-gradient-to-r from-yellow-500 to-black max-w-full  dark:to-yellow-200">
-                {standard.title} - ({standard.titleAbbreviation})
+                {standard.title} - {standard.id === 2 && <br />} (
+                {standard.titleAbbreviation})
               </CardTitle>
 
               <CardDescription>{standard.description}</CardDescription>
             </CardHeader>
 
             <CardContent>
-              <p className="text-justify">{standard.content}</p>
+              <p className="">{standard.content}</p>
               <ul className="mt-4 list-disc list-inside">
                 {standard.standards.map((item) => (
                   <li key={item}>{item}</li>

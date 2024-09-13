@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { MoonIcon, SunIcon } from "lucide-react";
 import { MenuIcon, XIcon } from "lucide-react";
+import useTheme from "@/context/ThemeContext";
 
 const oswald = Oswald({
   weight: ["600"],
@@ -14,23 +15,7 @@ const oswald = Oswald({
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [bgOnScroll, setBgOnScroll] = useState(false);
-  const [theme, setTheme] = useState(
-    typeof window !== "undefined"
-      ? window.localStorage.getItem("theme") || "dark"
-      : "dark"
-  );
-
-  useEffect(() => {
-    if (typeof window !== undefined) {
-      if (theme === "dark") {
-        window.document.documentElement.classList.add("dark");
-        localStorage.setItem("theme", "dark");
-      } else {
-        window.document.documentElement.classList.remove("dark");
-        localStorage.setItem("theme", "light");
-      }
-    }
-  }, [theme]);
+  const { setTheme, theme } = useTheme();
 
   useEffect(() => {
     const changeBgOnScroll = () => {
