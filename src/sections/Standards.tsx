@@ -19,7 +19,7 @@ const Standards = () => {
         {standards.map((standard) => (
           <Card key={standard.id}>
             <CardHeader className="text-center">
-              <CardTitle className="bg-clip-text text-xl text-transparent bg-gradient-to-r from-yellow-500 to-black max-w-full ">
+              <CardTitle className="bg-clip-text text-xl text-transparent bg-gradient-to-r from-yellow-500 to-black max-w-full  dark:to-yellow-200">
                 {standard.title} - ({standard.titleAbbreviation})
               </CardTitle>
 
