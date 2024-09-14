@@ -3,6 +3,9 @@ import "./globals.css";
 import { Roboto } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { ThemeContextProvider } from "@/context/ThemeContext";
+import { Toaster } from "@/components/ui/toaster";
+import Navbar from "@/sections/Navbar";
+import Footer from "@/sections/Footer";
 
 const roboto = Roboto({
   weight: ["400", "500", "700"],
@@ -28,7 +31,12 @@ export default function RootLayout({
     <html lang="es" className="dark">
       <body className={cn("bg-slate-600 dark:bg-gray-800", roboto.className)}>
         <ThemeContextProvider>
-          <main className="container max-w-[1280px] mx-auto">{children}</main>
+          <Navbar />
+          <main className="px-4 container max-w-[1280px] mx-auto bg-[whitesmoke] dark:bg-black overflow-x-hidden mt-20">
+            {children}
+          </main>
+          <Footer />
+          <Toaster />
         </ThemeContextProvider>
       </body>
     </html>

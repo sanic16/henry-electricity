@@ -61,7 +61,7 @@
     @apply border-border;
   }
   body {
-    @apply text-foreground min-h-[200vh];
+    @apply text-foreground;
   }
 }
 
