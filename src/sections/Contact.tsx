@@ -69,9 +69,9 @@ const Contact = () => {
   return (
     <div className="w-full max-w-5xl mx-auto">
       <Form {...form}>
-        <form className="space-y-6" onSubmit={form.handleSubmit(onSubmit)}>
-          <div className="grid lg:grid-cols-2 gap-4">
-            <div className="space-y-8">
+        <form className="space-y-8" onSubmit={form.handleSubmit(onSubmit)}>
+          <div className="grid lg:grid-cols-2 gap-8">
+            <div className="space-y-8 lg:flex lg:flex-col lg:justify-between lg:space-y-0">
               <FormField
                 control={form.control}
                 name="name"
@@ -134,13 +134,13 @@ const Contact = () => {
                 control={form.control}
                 name="message"
                 render={({ field }) => (
-                  <FormItem className="h-full lg:flex lg:flex-col">
+                  <FormItem>
                     <FormLabel className="text-base">Mensaje</FormLabel>
-                    <FormControl className="flex-grow">
+                    <FormControl>
                       <Textarea
                         {...field}
                         placeholder="Escribe tu mensaje"
-                        className="resize-none h-40 lg:h-auto"
+                        className="resize-none h-32 lg:h-72 "
                         disabled={isPending}
                       />
                     </FormControl>

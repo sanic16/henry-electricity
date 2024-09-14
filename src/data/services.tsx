@@ -9,6 +9,19 @@ import {
   Sun,
 } from "lucide-react";
 
+export const navbar = [
+  {
+    id: 1,
+    title: "Inicio",
+    href: "/",
+  },
+  {
+    id: 2,
+    title: "Contacto",
+    href: "/contacto",
+  },
+];
+
 export const services = [
   {
     id: 1,

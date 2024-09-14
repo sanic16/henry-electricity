@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { MoonIcon, SunIcon } from "lucide-react";
 import { MenuIcon, XIcon } from "lucide-react";
 import useTheme from "@/context/ThemeContext";
+import { navbar } from "@/data/services";
 
 const oswald = Oswald({
   weight: ["600"],
@@ -57,7 +58,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`container max-w-[1280px] px-4 mx-auto bg-[whitesmoke] dark:bg-black w-full fixed h-20 top-0 left-0 right-0 grid items-center z-[1] ${
+      className={`container max-w-[1280px] px-4 mx-auto fixed h-20 top-0 left-0 right-0 bg-[whitesmoke] dark:bg-black w-full grid items-center z-[1] ${
         bgOnScroll
           ? "bg-white/50 dark:bg-black/55 backdrop-blur-sm shadow-sm border-1 border-b border-black/50 dark:border-yellow-200/50"
           : "bg-[whitesmoke] dark:bg-black"
@@ -80,44 +81,24 @@ const Navbar = () => {
           >
             {theme === "light" ? <MoonIcon size={24} /> : <SunIcon size={24} />}
           </div>
-          <div>
-            <Link href={"/"}>Inicio</Link>
-          </div>
-          <div>
-            <Link href={"/"}>Nosotros</Link>
-          </div>
-          <div>
-            <Link href={"/"}>Equipo</Link>
-          </div>
-          <div>
-            <Link href={"/"}>Proyectos</Link>
-          </div>
-          <div>
-            <Link href={"/contacto"}>Contacto</Link>
-          </div>
+          {navbar.map((item) => (
+            <div key={item.id}>
+              <Link href={item.href}>{item.title}</Link>
+            </div>
+          ))}
         </div>
 
         {/* MOBILE */}
         <div
           className={`lg:hidden transition-all duration-500 fixed z-10 ${
-            isOpen ? "left-0 backdrop-blur-md" : "-left-full"
-          } top-20 right-0 bottom-0 flex flex-col w-full h-[calc(100vh-5rem)] pt-40 landscape:pt-4 landscape:space-y-1 pl-12 space-y-3 text-lg text-white bg-black/95`}
+            isOpen ? "top-20 backdrop-blur-md" : "-top-[100vh]"
+          } left-0 right-0 bottom-0 flex flex-col w-full h-[calc(100vh-5rem)] pt-40 landscape:pt-4 landscape:space-y-1 pl-12 space-y-3 text-lg text-white bg-black/95`}
         >
-          <div>
-            <Link href={"/"}>Inicio</Link>
-          </div>
-          <div>
-            <Link href={"/"}>Nosotros</Link>
-          </div>
-          <div>
-            <Link href={"/"}>Equipo</Link>
-          </div>
-          <div>
-            <Link href={"/"}>Proyectos</Link>
-          </div>
-          <div>
-            <Link href={"/"}>Contacto</Link>
-          </div>
+          {navbar.map((item) => (
+            <div key={item.id}>
+              <Link href={item.href}>{item.title}</Link>
+            </div>
+          ))}
         </div>
 
         <div className="flex items-center gap-4 lg:hidden">
@@ -130,7 +111,7 @@ const Navbar = () => {
           <div>
             <button
               onClick={() => setIsOpen((prev) => !prev)}
-              className="hamburguer outline-none grid"
+              className="hamburguer outline-none grid text-black dark:text-white"
             >
               {isOpen ? <XIcon size={32} /> : <MenuIcon size={32} />}
             </button>

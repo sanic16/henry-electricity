@@ -7,7 +7,7 @@ export default function page() {
       <p className="text-center">
         Si tienes alguna pregunta, no dudes en contactarnos.
       </p>
-      <div className="mt-4">
+      <div className="mt-8">
         <Contact />
       </div>
     </div>

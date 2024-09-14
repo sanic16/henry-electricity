@@ -29,10 +29,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="dark">
-      <body className={cn("bg-slate-600 dark:bg-gray-800", roboto.className)}>
+      <body
+        className={cn(
+          "text-black dark:text-white bg-gray-950 dark:bg-gray-700",
+          roboto.className
+        )}
+      >
         <ThemeContextProvider>
           <Navbar />
-          <main className="container max-w-[1280px] px-4 mx-auto bg-[whitesmoke] dark:bg-black overflow-x-hidden">
+          <main className="container max-w-[1280px] px-4 mx-auto mt-20 bg-[whitesmoke] dark:bg-black overflow-x-hidden">
             {children}
           </main>
           <Footer />
