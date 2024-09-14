@@ -2,10 +2,17 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Josefin_Sans } from "next/font/google";
 import { cn } from "@/lib/utils";
-import { ThemeContextProvider } from "@/context/ThemeContext";
+// import { ThemeContextProvider } from "@/context/ThemeContext";
 import { Toaster } from "@/components/ui/toaster";
 import Navbar from "@/sections/Navbar";
 import Footer from "@/sections/Footer";
+import dynamic from "next/dynamic";
+const ThemeContextProvider = dynamic(
+  () => import("@/context/ThemeContextProvider"),
+  {
+    ssr: false,
+  }
+);
 
 const font = Josefin_Sans({
   weight: ["400", "500", "700"],
@@ -28,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="dark">
+    <html lang="es">
       <body
         className={cn(
           "text-black dark:text-white bg-gray-950 dark:bg-gray-700",
