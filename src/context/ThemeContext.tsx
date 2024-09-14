@@ -18,8 +18,8 @@ export const ThemeContextProvider = ({
 }) => {
   const [theme, setTheme] = useState<"dark" | "light">(
     typeof window !== "undefined"
-      ? (localStorage.getItem("theme") as string as "dark" | "light") || "dark"
-      : "dark"
+      ? (localStorage.getItem("theme") as string as "dark" | "light") || "light"
+      : "light"
   );
   const setThemeMode = (mode: "dark" | "light") => setTheme(mode);
 
