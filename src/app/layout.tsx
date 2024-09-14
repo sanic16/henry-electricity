@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Josefin_Sans } from "next/font/google";
 import { cn } from "@/lib/utils";
-// import { ThemeContextProvider } from "@/context/ThemeContext";
+// import ThemeContextProvider from "@/context/ThemeContextProvider";
 import { Toaster } from "@/components/ui/toaster";
 import Navbar from "@/sections/Navbar";
 import Footer from "@/sections/Footer";
