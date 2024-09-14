@@ -32,7 +32,7 @@ export default function RootLayout({
       <body className={cn("bg-slate-600 dark:bg-gray-800", roboto.className)}>
         <ThemeContextProvider>
           <Navbar />
-          <main className="px-4 container max-w-[1280px] mx-auto bg-[whitesmoke] dark:bg-black overflow-x-hidden mt-20">
+          <main className="container max-w-[1280px] px-4 mx-auto bg-[whitesmoke] dark:bg-black overflow-x-hidden">
             {children}
           </main>
           <Footer />

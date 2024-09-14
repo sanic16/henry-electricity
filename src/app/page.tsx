@@ -5,11 +5,11 @@ import Standards from "@/sections/Standards";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Header />
       <Feature />
       <Services />
       <Standards />
-    </div>
+    </>
   );
 }

@@ -57,7 +57,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`container max-w-[1280px] mx-auto bg-[whitesmoke] dark:bg-black overflow-x-hidden fixed h-20 top-0 left-0 right-0 grid items-center px-4 z-[1] ${
+      className={`container max-w-[1280px] px-4 mx-auto bg-[whitesmoke] dark:bg-black w-full fixed h-20 top-0 left-0 right-0 grid items-center z-[1] ${
         bgOnScroll
           ? "bg-white/50 dark:bg-black/55 backdrop-blur-sm shadow-sm border-1 border-b border-black/50 dark:border-yellow-200/50"
           : "bg-[whitesmoke] dark:bg-black"
@@ -99,7 +99,7 @@ const Navbar = () => {
 
         {/* MOBILE */}
         <div
-          className={`lg:hidden transition-all duration-500 fixed ${
+          className={`lg:hidden transition-all duration-500 fixed z-10 ${
             isOpen ? "left-0 backdrop-blur-md" : "-left-full"
           } top-20 right-0 bottom-0 flex flex-col w-full h-[calc(100vh-5rem)] pt-40 landscape:pt-4 landscape:space-y-1 pl-12 space-y-3 text-lg text-white bg-black/95`}
         >
