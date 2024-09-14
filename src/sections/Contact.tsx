@@ -23,6 +23,7 @@ import { contactAction } from "@/actions";
 const Contact = () => {
   const [isPending, startTransition] = useTransition();
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  console.log(recaptchaToken);
   const form = useForm<z.infer<typeof contactSchema>>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
