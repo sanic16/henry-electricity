@@ -23,7 +23,7 @@ const Questions = () => {
       title="Preguntas frecuentes"
       description="Aquí encontrarás las preguntas más frecuentes que nos hacen nuestros clientes."
     >
-      <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-[400px,400px] xl:grid-cols-[500px,500px] justify-items-center justify-center gap-8">
+      <div className="grid grid-cols-[minmax(auto,500px)] md:grid-cols-[325px,325px]  lg:grid-cols-[400px,400px] xl:grid-cols-[500px,500px] justify-items-center justify-center gap-8">
         {paginatedQuestions.map((item) => (
           <div key={item.id}>
             <h1 className="text-center md:text-left mb-2 sm:mb-4 font-bold text-lg">
