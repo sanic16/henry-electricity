@@ -46,7 +46,7 @@ const NewsLetter = () => {
   };
 
   return (
-    <Section padding="py-10">
+    <Section>
       <div className="bg-card py-20 px-4 flex flex-col items-center">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl mb-6 text-center text-blue-950 dark:text-yellow-500 font-bold capitalize">
           Suscribete a nuestro boletín de noticias

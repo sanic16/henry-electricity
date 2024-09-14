@@ -19,7 +19,7 @@ const Section: React.FC<SectionProps> = ({
     <div
       id={id}
       className={`${
-        padding ? padding : "py-16"
+        padding ? padding : "py-20"
       } border-t-[1px] border-dashed border-black dark:border-gray-300`}
     >
       {title && <SectionHeading title={title} description={description} />}
