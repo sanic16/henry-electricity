@@ -6,15 +6,18 @@ interface SectionProps {
   description?: string;
   children: React.ReactNode;
   padding?: string;
+  id?: string;
 }
 const Section: React.FC<SectionProps> = ({
   title,
   description,
   padding,
   children,
+  id,
 }) => {
   return (
     <div
+      id={id}
       className={`${
         padding ? padding : "py-16"
       } border-t-[1px] border-dashed border-black dark:border-gray-300`}

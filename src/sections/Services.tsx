@@ -5,6 +5,7 @@ import { services } from "@/data/services";
 const Services = () => {
   return (
     <Section
+      id="servicios"
       title="Servicios"
       description="Ofrecemos soluciones integrales en ingeniería eléctrica, garantizando la máxima calidad y eficiencia en cada proyecto."
     >

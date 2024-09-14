@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Roboto } from "next/font/google";
+import { Josefin_Sans } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { ThemeContextProvider } from "@/context/ThemeContext";
 import { Toaster } from "@/components/ui/toaster";
 import Navbar from "@/sections/Navbar";
 import Footer from "@/sections/Footer";
 
-const roboto = Roboto({
+const font = Josefin_Sans({
   weight: ["400", "500", "700"],
   subsets: ["latin"],
 });
@@ -32,7 +32,7 @@ export default function RootLayout({
       <body
         className={cn(
           "text-black dark:text-white bg-gray-950 dark:bg-gray-700",
-          roboto.className
+          font.className
         )}
       >
         <ThemeContextProvider>
