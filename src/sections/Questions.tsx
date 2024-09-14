@@ -26,7 +26,7 @@ const Questions = () => {
       <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-[400px,400px] xl:grid-cols-[500px,500px] justify-items-center justify-center gap-8">
         {paginatedQuestions.map((item) => (
           <div key={item.id}>
-            <h1 className="text-center md:text-left mb-2 sm:mb-4 text-blue-950 dark:text-yellow-500">
+            <h1 className="text-center md:text-left mb-2 sm:mb-4 font-bold text-lg">
               {item.question}
             </h1>
             <div className="text-center md:text-left">{item.answer}</div>

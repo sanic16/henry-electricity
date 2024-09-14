@@ -22,7 +22,7 @@ const Standards = () => {
             key={standard.id}
             className="min-w-[250px] max-w-[300px] w-full sm:max-w-full"
           >
-            <CardHeader className="text-center">
+            <CardHeader className="text-center md:text-left">
               <CardTitle className="bg-clip-text text-xl">
                 {standard.title} - {standard.id === 2 && <br />} (
                 {standard.titleAbbreviation})
@@ -32,8 +32,8 @@ const Standards = () => {
             </CardHeader>
 
             <CardContent>
-              <p className="">{standard.content}</p>
-              <ul className="mt-4 list-disc list-inside">
+              <p className="text-center md:text-left">{standard.content}</p>
+              <ul className="mt-4 list-disc list-inside text-center md:text-left">
                 {standard.standards.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
