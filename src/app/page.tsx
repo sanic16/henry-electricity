@@ -1,3 +1,4 @@
+import Brands from "@/sections/Brands";
 import Feature from "@/sections/Feature";
 import Header from "@/sections/Header";
 import NewsLetter from "@/sections/NewsLetter";
@@ -13,6 +14,7 @@ export default function Home() {
       <Services />
       <Standards />
       <Questions />
+      <Brands />
       <NewsLetter />
     </>
   );

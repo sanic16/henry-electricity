@@ -22,7 +22,7 @@ const Section: React.FC<SectionProps> = ({
         padding ? padding : "py-12 md:py-20"
       } border-t-[1px] border-dashed border-black dark:border-gray-300`}
     >
-      {title && <SectionHeading title={title} description={description} />}
+      <SectionHeading title={title} description={description} />
       <div className={`${title ? "mt-12" : ""}`}>{children}</div>
     </div>
   );
