@@ -22,7 +22,7 @@ const NewsLetter = () => {
   const [isPending, startTransition] = useTransition();
   const handleEmailSubscription = () => {
     startTransition(() => {
-      newsletterAction(email).then((response) => {
+      newsletterAction({ email }).then((response) => {
         console.log(response);
         if (!response) return;
         if (response.error) {

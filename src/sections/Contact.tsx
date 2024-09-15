@@ -15,7 +15,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { toast } from "@/hooks/use-toast";
 import { Textarea } from "@/components/ui/textarea";
-import { useState, useTransition } from "react";
+import { useRef, useState, useTransition } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { contactSchema } from "@/schemas";
 import { contactAction } from "@/actions";
@@ -23,6 +23,7 @@ import { contactAction } from "@/actions";
 const Contact = () => {
   const [isPending, startTransition] = useTransition();
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const recaptchaRef = useRef<ReCAPTCHA | null>(null);
   console.log(recaptchaToken);
   const form = useForm<z.infer<typeof contactSchema>>({
     resolver: zodResolver(contactSchema),
@@ -35,8 +36,9 @@ const Contact = () => {
   });
 
   const onSubmit = async (data: z.infer<typeof contactSchema>) => {
+    setRecaptchaToken(null);
     startTransition(() => {
-      contactAction(data)
+      contactAction(data, recaptchaToken as string)
         .then((response) => {
           if ("error" in response) {
             toast({
@@ -51,6 +53,7 @@ const Contact = () => {
               description: response.success,
               duration: 6000,
             });
+            form.reset();
           }
         })
         .catch((error) => {
@@ -62,8 +65,17 @@ const Contact = () => {
               duration: 6000,
             });
           }
+        })
+        .finally(() => {
+          console.log("resetting recaptcha");
+          recaptchaRef.current?.reset();
         });
     });
+  };
+
+  const handleRecaptchaExpired = () => {
+    setRecaptchaToken(null);
+    recaptchaRef.current?.reset();
   };
 
   return (
@@ -150,19 +162,24 @@ const Contact = () => {
               />
             </div>
           </div>
-          <Button
-            type="submit"
-            className="w-full lg:w-1/2 lg:mx-auto lg:block"
-            disabled={isPending}
-          >
-            Enviar
-          </Button>
-          <ReCAPTCHA
-            sitekey={
-              process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY as string | ""
-            }
-            onChange={(token) => setRecaptchaToken(token)}
-          />
+          <div className="flex justify-between">
+            <Button
+              type="submit"
+              className=""
+              disabled={!recaptchaToken || isPending}
+            >
+              Enviar
+            </Button>
+            <ReCAPTCHA
+              ref={recaptchaRef}
+              sitekey={
+                process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY as string | ""
+              }
+              onChange={(token) => setRecaptchaToken(token)}
+              onExpired={handleRecaptchaExpired}
+              onError={() => recaptchaRef.current?.reset()}
+            />
+          </div>
         </form>
       </Form>
     </div>
