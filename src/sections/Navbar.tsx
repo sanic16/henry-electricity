@@ -107,8 +107,12 @@ const Navbar = () => {
         {/* MOBILE */}
         <div
           className={`lg:hidden transition-all duration-500 fixed z-10 ${
-            isOpen ? "top-20 backdrop-blur-md" : "-top-[100vh]"
-          } left-0 right-0 bottom-0 flex flex-col w-full h-[calc(100vh-5rem)] pt-40 landscape:pt-4 landscape:space-y-1 pl-12 space-y-3 text-lg text-white bg-black/95`}
+            isOpen
+              ? bgOnScroll
+                ? "top-28 backdrop-blur-md h-[calc(100vh-7rem)]"
+                : "top-20 backdrop-blur-md h-[calc(100vh-5rem)]"
+              : "-top-[100vh] h-[calc(100vh-5rem)]"
+          } left-0 right-0 bottom-0 flex flex-col w-full  pt-40 landscape:pt-4 landscape:space-y-1 pl-12 space-y-3 text-lg text-white bg-black/95`}
         >
           {navbar.map((item) => (
             <div key={item.id}>
