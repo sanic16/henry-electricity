@@ -80,7 +80,7 @@ const Navbar = () => {
           </a>
         </p>
       </div>
-      <nav className="px-4 flex items-center justify-between font-bold">
+      <nav className="px-4 flex items-center justify-between font-bold self-center">
         <Link
           href={"/"}
           className={cn(
