@@ -66,6 +66,8 @@ export function BrandsCarousel() {
         AutoPlay({
           delay: 3000,
           jump: false,
+          stopOnInteraction: false,
+          stopOnFocusIn: false,
         }),
       ]}
       className="w-full"
