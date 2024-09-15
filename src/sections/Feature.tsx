@@ -18,14 +18,13 @@ const Feature = () => {
             Servicios de calidad en ingeniería eléctrica
           </h1>
           <p className="text-base lg:text-lg mb-4">
-            Ofrecemos soluciones integrales en ingeniería eléctrica,
-            garantizando la máxima calidad y eficiencia en cada proyecto.
+            Ofrecemos soluciones eléctricas completas, asegurando calidad y
+            eficiencia en cada trabajo que realizamos.
           </p>
           <p className="hidden sm:block lg:text-lg">
-            Nuestro equipo de profesionales altamente capacitados y
-            especializados en el sector eléctrico, nos permite ofrecer un
-            servicio de calidad y eficiente, cumpliendo con los más altos
-            estándares de seguridad y normativas vigentes en el sector.
+            Tenemos un equipo capacitado que nos permite brindar un servicio
+            confiable y seguro, cumpliendo con los estándares más actuales del
+            sector.
           </p>
         </div>
       </div>

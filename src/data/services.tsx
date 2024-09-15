@@ -61,7 +61,7 @@ export const services = [
     id: 6,
     title: "Estudios de Calidad de Energía",
     description:
-      "Análisis de armónicos y calidad de energía en sistemas eléctricos industriales.",
+      "Análisis de armónicos y calidad de energía en sistemas eléctricos.",
     icon: Activity, // Power quality studies
   },
   {
