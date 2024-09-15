@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { MoonIcon, SunIcon } from "lucide-react";
 import { MenuIcon, XIcon } from "lucide-react";
 import useTheme from "@/context/ThemeContext";
+import NavLink from "@/components/NavLink";
 import { navbar } from "@/data/services";
 
 const oswald = Oswald({
@@ -56,6 +57,10 @@ const Navbar = () => {
     };
   }, [isOpen]);
 
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
   return (
     <div
       className={`container max-w-[1280px] mx-auto fixed ${
@@ -99,7 +104,12 @@ const Navbar = () => {
           </div>
           {navbar.map((item) => (
             <div key={item.id}>
-              <Link href={item.href}>{item.title}</Link>
+              <NavLink
+                href={item.href}
+                activeClassName="text-blue-950 dark:text-yellow-500"
+              >
+                {item.title}
+              </NavLink>
             </div>
           ))}
         </div>
@@ -116,7 +126,13 @@ const Navbar = () => {
         >
           {navbar.map((item) => (
             <div key={item.id}>
-              <Link href={item.href}>{item.title}</Link>
+              <NavLink
+                href={item.href}
+                onClick={handleClose}
+                activeClassName="text-blue-950 dark:text-yellow-500"
+              >
+                {item.title}
+              </NavLink>
             </div>
           ))}
         </div>
