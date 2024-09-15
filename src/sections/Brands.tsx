@@ -5,7 +5,9 @@ import React from "react";
 const Brands = () => {
   return (
     <Section description="Marcas con las que trabajamos" padding="py-8">
-      <BrandsCarousel />
+      <div className="mt-4">
+        <BrandsCarousel />
+      </div>
     </Section>
   );
 };

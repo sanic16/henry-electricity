@@ -9,10 +9,10 @@ import {
 
 import eaton from "@/../public/images/logos/EatonLogo.png";
 import ge from "@/../public/images/logos/GE-Symbol-600x338.png";
-import legrand from "@/../public/images/logos/Legrand-logo.jpg";
+import legrand from "@/../public/images/logos/legrand.png";
 import rockwell from "@/../public/images/logos/Rockwell_logo-768x204.png";
 import abb from "@/../public/images/logos/abb.png";
-import scheneider from "@/../public/images/logos/schnedier.webp";
+import scheneider from "@/../public/images/logos/Schneider.png";
 import siemens from "@/../public/images/logos/siemens-logo.png";
 import Image from "next/image";
 import AutoPlay from "embla-carousel-autoplay";
@@ -72,13 +72,13 @@ export function BrandsCarousel() {
       ]}
       className="w-full"
     >
-      <CarouselContent>
+      <CarouselContent className="items-center">
         {brands.map((brand) => (
           <CarouselItem
             key={brand.id}
             className="pl-4 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5"
           >
-            <div className="flex items-center aspect-square">
+            <div className="flex">
               <Image
                 src={brand.image}
                 alt={brand.name}
