@@ -72,7 +72,7 @@ const Navbar = () => {
             oswald.className
           )}
         >
-          HenryElectricidad
+          Ingeniería Eléctrica
         </Link>
         <div className="hidden lg:flex gap-8">
           <div
