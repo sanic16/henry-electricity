@@ -58,13 +58,29 @@ const Navbar = () => {
 
   return (
     <div
-      className={`container max-w-[1280px] px-4 mx-auto fixed h-20 top-0 left-0 right-0 bg-[whitesmoke] dark:bg-black w-full grid items-center z-[1] ${
+      className={`container max-w-[1280px] mx-auto fixed ${
+        bgOnScroll ? "h-28" : "h-20"
+      } top-0 left-0 right-0 bg-[whitesmoke] dark:bg-black w-full grid ${
+        bgOnScroll ? "grid-rows-[2fr,5fr]" : "items-center"
+      } z-[1] ${
         bgOnScroll
           ? "bg-white/50 dark:bg-black/55 backdrop-blur-sm shadow-sm border-1 border-b border-black/50 dark:border-yellow-200/50"
           : "bg-[whitesmoke] dark:bg-black"
       }`}
     >
-      <nav className="flex items-center justify-between font-bold">
+      <div
+        className={`${
+          bgOnScroll ? "block" : "hidden"
+        } bg-blue-950 dark:bg-yellow-500 flex items-center justify-center`}
+      >
+        <p className="text-white text-center dark:text-black">
+          <a href="tel:+573103333333">
+            Ing. <span className="hidden sm:inline">Electricista</span> Henry
+            Ajquejay +502 3236 5352
+          </a>
+        </p>
+      </div>
+      <nav className="px-4 flex items-center justify-between font-bold">
         <Link
           href={"/"}
           className={cn(
