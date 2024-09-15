@@ -162,7 +162,7 @@ const Contact = () => {
               />
             </div>
           </div>
-          <div className="flex justify-between">
+          <div className="flex flex-col gap-4 items-center sm:flex-row justify-between">
             <Button
               type="submit"
               className=""
@@ -170,15 +170,19 @@ const Contact = () => {
             >
               Enviar
             </Button>
-            <ReCAPTCHA
-              ref={recaptchaRef}
-              sitekey={
-                process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY as string | ""
-              }
-              onChange={(token) => setRecaptchaToken(token)}
-              onExpired={handleRecaptchaExpired}
-              onError={() => recaptchaRef.current?.reset()}
-            />
+            <div>
+              <ReCAPTCHA
+                ref={recaptchaRef}
+                sitekey={
+                  process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY as
+                    | string
+                    | ""
+                }
+                onChange={(token) => setRecaptchaToken(token)}
+                onExpired={handleRecaptchaExpired}
+                onError={() => recaptchaRef.current?.reset()}
+              />
+            </div>
           </div>
         </form>
       </Form>

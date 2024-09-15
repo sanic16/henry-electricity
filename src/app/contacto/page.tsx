@@ -2,7 +2,7 @@ import Contact from "@/sections/Contact";
 
 export default function page() {
   return (
-    <div className="mt-12 md:mt-20">
+    <div className="mt-12 md:mt-20 mb-8">
       <h1 className="text-5xl text-center text-blue-950 dark:text-yellow-500">
         Contacto
       </h1>
