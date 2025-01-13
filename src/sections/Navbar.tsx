@@ -80,8 +80,8 @@ const Navbar = () => {
       >
         <p className="text-white text-center dark:text-black">
           <a href="tel:+573103333333">
-            <span className="hidden sm:inline">Electricista</span> Julio Sanic
-            +502 3980-2176
+            <span className="hidden sm:inline">Electricista</span> Contacto para
+            servicio: +502 3980-2176
           </a>
         </p>
       </div>

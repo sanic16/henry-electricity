@@ -1,13 +1,4 @@
-import {
-  Plug,
-  Layout,
-  Wrench,
-  Sliders,
-  TrendingUp,
-  Activity,
-  Power,
-  Sun,
-} from "lucide-react";
+import { Plug, Layout, Sliders, Power, Sun } from "lucide-react";
 
 export const navbar = [
   {
@@ -35,48 +26,28 @@ export const services = [
     title: "Diseño Eléctrico",
     description:
       "Diseño de sistemas eléctricos para proyectos de baja tensión.",
-    icon: Layout, // Electrical design
-  },
-  {
-    id: 3,
-    title: "Mantenimiento Eléctrico",
-    description:
-      "Mantenimiento preventivo y correctivo de sistemas eléctricos.",
-    icon: Wrench, // Electrical maintenance
+    icon: Layout,
   },
   {
     id: 4,
     title: "Automatización Eléctrica",
     description:
       "Automatización de luces, motores y sistemas eléctricos en general.",
-    icon: Sliders, // Electrical automation
-  },
-  {
-    id: 5,
-    title: "Corrección de Factor de Potencia",
-    description: "Estudio y correción de factor potencia para evitar multas.",
-    icon: TrendingUp, // Power factor correction
-  },
-  {
-    id: 6,
-    title: "Estudios de Calidad de Energía",
-    description:
-      "Análisis de armónicos y calidad de energía en sistemas eléctricos.",
-    icon: Activity, // Power quality studies
+    icon: Sliders,
   },
   {
     id: 7,
     title: "Instalación de Plantas Eléctricas",
     description:
       "Instalación de plantas eléctricas de emergencia y transferencia automática.",
-    icon: Power, // Power plants installation
+    icon: Power,
   },
   {
     id: 8,
     title: "Instalación de Paneles Solares",
     description:
       "Estudio, diseño e instalación de inversores y paneles solares.",
-    icon: Sun, // Solar panels installation
+    icon: Sun,
   },
 ];
 
@@ -170,20 +141,13 @@ export const questions: {
     id: 8,
     question: "¿Puedo solicitar una consulta técnica en mi ubicación?",
     answer:
-      "Sí, ofrecemos visitas técnicas en Ciudad de Guatemala, Escuintla, Sacatepéquez y Chimaltenango. Durante la visita, nuestros técnicos evaluarán tus necesidades eléctricas y te proporcionarán un plan de acción personalizado.",
+      "Sí, ofrecemos visitas técnicas en Ciudad de Guatemala, San Miguel Petapa, Escuintla, Sacatepéquez y Chimaltenango. Durante la visita, nuestros técnicos evaluarán tus necesidades eléctricas y te proporcionarán un plan de acción personalizado.",
   },
   {
     id: 9,
     question:
       "¿Tienen experiencia en instalaciones eléctricas en áreas rurales?",
     answer:
-      "Aunque nos enfocamos principalmente en áreas urbanas como Ciudad de Guatemala, Escuintla, Sacatepéquez y Chimaltenango, también hemos trabajado en proyectos en zonas semi-rurales dentro de estas áreas. Evaluamos cada proyecto para ofrecer una solución acorde a las características del lugar.",
-  },
-  {
-    id: 10,
-    question:
-      "¿Puedo obtener planos eléctricos firmados por un ingeniero eléctrico colegiado?",
-    answer:
-      "Sí, nuestros ingenieros eléctricos están colegiados y pueden proporcionarte planos eléctricos firmados y sellados, cumpliendo con todas las normativas locales necesarias para trámites de construcción o inspección de instalaciones.",
+      "Aunque nos enfocamos principalmente en áreas urbanas como Ciudad de Guatemala, San Miguel Petapa, Escuintla, Sacatepéquez y Chimaltenango, también hemos trabajado en proyectos en zonas semi-rurales dentro de estas áreas. Evaluamos cada proyecto para ofrecer una solución acorde a las características del lugar.",
   },
 ];

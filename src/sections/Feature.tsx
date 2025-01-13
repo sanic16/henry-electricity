@@ -13,18 +13,18 @@ const Feature = () => {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="min-w-[275px] w-1/2 sm:w-[450px] md:w-[450px] lg:w-[600px] absolute top-60 sm:top-20 md:top-24 lg:top-32   right-0 sm:-right-32 md:-right-56 lg:-right-72 bg-card shadow-sm py-4 sm:py-8 lg:py-16 px-4 sm:px-8 lg:px-10 border-b-2 lg:border-b-[4px] border-b-blue-950 dark:border-b-yellow-500 border-r-2 lg:border-r-[4px] border-r-blue-950 dark:border-r-yellow-500">
+        <div className="min-w-[275px] w-1/2 sm:w-[450px] md:w-[450px] lg:w-[600px] absolute top-60 sm:top-20 md:top-24 lg:top-32 right-0 sm:-right-32 md:-right-56 lg:-right-72 bg-card shadow-sm py-4 sm:py-8 lg:py-16 px-4 sm:px-8 lg:px-10 border-b-2 lg:border-b-[4px] border-b-blue-950 dark:border-b-yellow-500 border-r-2 lg:border-r-[4px] border-r-blue-950 dark:border-r-yellow-500">
           <h1 className="text-3xl md:text-4xl lg:text-5xl uppercase mb-2 sm:mb-4 lg:mb-6 leading-[1.18]">
-            Servicios de calidad en ingeniería eléctrica
+            Servicios eléctricos de calidad
           </h1>
           <p className="text-base lg:text-lg mb-4">
             Ofrecemos soluciones eléctricas completas, asegurando calidad y
             eficiencia en cada trabajo que realizamos.
           </p>
           <p className="hidden sm:block lg:text-lg">
-            Tenemos un equipo capacitado que nos permite brindar un servicio
-            confiable y seguro, cumpliendo con los estándares más actuales del
-            sector.
+            Contamos con un equipo capacitado que nos permite brindar un
+            servicio confiable y seguro, cumpliendo con los estándares más
+            actuales del sector.
           </p>
         </div>
       </div>
