@@ -7,7 +7,7 @@ export default function page() {
         Contacto
       </h1>
       <p className="text-center">
-        Nos puedes llamar al +502 3236 5352 o llenar el siguiente formulario.
+        Me puedes llamar al +502 3980-2176 o llenar el siguiente formulario.
       </p>
       <div className="mt-8">
         <Contact />

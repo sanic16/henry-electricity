@@ -24,7 +24,7 @@ const Contact = () => {
   const [isPending, startTransition] = useTransition();
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
   const recaptchaRef = useRef<ReCAPTCHA | null>(null);
-  console.log(recaptchaToken);
+  console.log(process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY);
   const form = useForm<z.infer<typeof contactSchema>>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
